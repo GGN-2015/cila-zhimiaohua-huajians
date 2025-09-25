@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhimiaohua 输入法</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .transition-height {
+                transition: height 0.3s ease;
+            }
+            .output-line {
+                margin-bottom: 0.5rem;
+                line-height: 1.6;
+                font-size: 0; /* 消除inline-block元素间的默认间隙 */
+            }
+            .image-item {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0; /* 移除所有外边距 */
+                padding: 0; /* 移除所有内边距 */
+            }
+            .text-item {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0.25rem;
+                font-size: 1rem; /* 恢复文本字体大小 */
+            }
+            .space-item {
+                display: inline-block;
+                width: 0.5rem; /* 空格宽度 */
+                font-size: 1rem; /* 恢复空格字体大小 */
+            }
+            /* 查询结果区图片样式 */
+            .query-image-item {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 0.5rem 0.5rem 0;
+                max-width: 50px;
+                height: auto;
+            }
+            /* 下拉提示框样式 */
+            .suggestions-container {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 100;
+                border: 1px solid #e5e7eb;
+                border-top: none;
+                border-radius: 0 0 0.5rem 0.5rem;
+                background-color: white;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                max-height: 200px;
+                overflow-y: auto;
+            }
+            .suggestion-item {
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            .suggestion-item:hover {
+                background-color: #f3f4f6;
+            }
+            .suggestion-item.active {
+                background-color: #eff6ff;
+                color: #2563eb;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- 页面标题 -->
+        <header class="mb-8 text-center">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-2">zhimiaohua 输入法</h1>
+            <p class="text-secondary text-lg">输入 zhimiaohua 罗马音，转换为 zhimiaohua huajian</p>
+        </header>
+
+        <!-- 主内容区（原有输入+输出） -->
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <!-- 输入区域 -->
+            <section class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+                <h2 class="text-xl font-semibold text-dark mb-4 flex items-center">
+                    <i class="fa fa-pencil-square-o text-primary mr-2"></i>输入罗马音
+                </h2>
+                <div class="relative">
+                    <textarea
+                        id="textInput"
+                        class="w-full h-64 p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
+                        placeholder="在此输入多行文本...&#10;每行文本会被单独处理&#10;多个空格才会在输出中显示一个空格"
+                    ></textarea>
+                    <div class="absolute right-3 bottom-3 text-xs text-secondary">
+                        <span id="wordCount">0</span> 个单词
+                    </div>
+                </div>
+                <div class="mt-4 text-sm text-secondary">
+                    <p><i class="fa fa-info-circle mr-1"></i> 提示：系统会自动查找与单词同名的图片（位于img文件夹中）并显示</p>
+                    <p><i class="fa fa-info-circle mr-1"></i> 多个相邻空格才会在输出中显示一个空格，图片之间无间隙</p>
+                </div>
+            </section>
+
+            <!-- 输出区域 -->
+            <section class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg">
+                <h2 class="text-xl font-semibold text-dark mb-4 flex items-center">
+                    <i class="fa fa-eye text-primary mr-2"></i>预览结果
+                </h2>
+                <div id="outputContainer" class="min-h-[256px] p-4 border border-gray-200 rounded-lg bg-gray-50 overflow-auto">
+                    <div class="text-center text-secondary py-12">
+                        <i class="fa fa-arrow-left text-2xl mb-2 hidden md:block"></i>
+                        <p>在左侧输入罗马音，zhimiaohua huajian 表示显示在这里</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 查询功能区域 -->
+        <section class="bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg mb-10">
+            <h2 class="text-xl font-semibold text-dark mb-4 flex items-center">
+                <i class="fa fa-search text-primary mr-2"></i>词语查询
+            </h2>
+            <!-- 查询输入栏 - 修改为相对定位以容纳下拉框 -->
+            <div class="relative mb-6">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input
+                        type="text"
+                        id="queryInput"
+                        class="flex-1 p-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                        placeholder="输入查询字符串（如abc，不支持多行）"
+                        maxlength="100"
+                    >
+                    <button
+                        id="queryBtn"
+                        class="bg-primary text-white px-6 py-4 rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center"
+                    >
+                        <i class="fa fa-search mr-2"></i>查询
+                    </button>
+                </div>
+                <!-- 下拉提示框容器 -->
+                <div id="suggestionsContainer" class="suggestions-container hidden"></div>
+            </div>
+
+            <!-- 查询结果栏 -->
+            <div id="queryResultContainer" class="min-h-[150px] p-4 border border-gray-200 rounded-lg bg-gray-50 overflow-auto">
+                <div class="text-center text-secondary py-8">
+                    <p>输入查询字符串并点击“查询”，将显示 exp 文件夹下同名 .txt 内容和 img 文件夹下同名 .png 图片</p>
+                </div>
+            </div>
+
+            <!-- 查询提示 -->
+            <div class="mt-4 text-sm text-secondary">
+                <p><i class="fa fa-info-circle mr-1"></i> 提示：查询字符串需与文件名称完全一致（区分大小写，如“Abc”≠“abc”）</p>
+                <p><i class="fa fa-info-circle mr-1"></i> 若 exp/[查询词].txt 或 img/[查询词].png 不存在，对应内容将不显示</p>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="mt-6 text-center text-secondary text-sm">
+            <p>zhimiaohua huajian 输入法 &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // ---------------------- 原有功能代码 ----------------------
+        const textInput = document.getElementById('textInput');
+        const outputContainer = document.getElementById('outputContainer');
+        const wordCount = document.getElementById('wordCount');
+
+        textInput.addEventListener('input', updateOutput);
+        updateOutput();
+
+        function updateOutput() {
+            const inputText = textInput.value;
+            outputContainer.innerHTML = '';
+
+            const words = inputText.split(/\s+/).filter(word => word.trim() !== '');
+            wordCount.textContent = words.length;
+
+            const lines = inputText.split('\n');
+
+            lines.forEach((line, lineIndex) => {
+                if (line === '' && lineIndex === lines.length - 1) return;
+
+                const lineDiv = document.createElement('div');
+                lineDiv.className = 'output-line';
+
+                const tokens = line.match(/(\S+|\s+)/g) || [];
+
+                tokens.forEach(token => {
+                    if (/^\s+$/.test(token)) {
+                        if (token.length >= 1) {
+                            const spaceSpan = document.createElement('span');
+                            spaceSpan.className = 'space-item';
+                            spaceSpan.textContent = ' ';
+                            lineDiv.appendChild(spaceSpan);
+                        }
+                    } else {
+                        const word = token;
+                        const imgSrc = `img/${word}.png`;
+
+                        const img = document.createElement('img');
+                        img.src = imgSrc;
+                        img.alt = word;
+                        img.className = 'image-item opacity-0 transition-opacity duration-300';
+                        img.style.maxWidth = '30px';
+                        img.style.height = 'auto';
+
+                        img.onerror = function() {
+                            const textSpan = document.createElement('span');
+                            textSpan.className = 'text-item';
+                            textSpan.textContent = word;
+                            lineDiv.replaceChild(textSpan, img);
+                        };
+
+                        img.onload = function() {
+                            img.classList.remove('opacity-0');
+                            img.classList.add('opacity-100');
+                        };
+
+                        lineDiv.appendChild(img);
+                    }
+                });
+
+                outputContainer.appendChild(lineDiv);
+            });
+        }
+
+        function adjustTextareaHeight() {
+            textInput.style.height = 'auto';
+            textInput.style.height = (textInput.scrollHeight > 300 ? 300 : textInput.scrollHeight) + 'px';
+        }
+        adjustTextareaHeight();
+        textInput.addEventListener('input', adjustTextareaHeight);
+        window.addEventListener('resize', adjustTextareaHeight);
+
+        // ---------------------- 查询功能代码（含实时下拉提示） ----------------------
+        const queryInput = document.getElementById('queryInput');
+        const queryBtn = document.getElementById('queryBtn');
+        const queryResultContainer = document.getElementById('queryResultContainer');
+        const suggestionsContainer = document.getElementById('suggestionsContainer');
+        
+        // 存储所有exp文件夹中的txt文件名（不含.txt后缀）
+        let allFilenames = [];
+        // 加载状态标记
+        let isLoadingFilenames = false;
+        
+        // 初始化时加载所有文件名
+        loadAllFilenames();
+        
+        // 为查询输入框添加事件监听
+        queryInput.addEventListener('input', handleQueryInput);
+        queryInput.addEventListener('focus', handleQueryFocus);
+        queryInput.addEventListener('keydown', handleQueryKeydown);
+        document.addEventListener('click', handleDocumentClick);
+        
+        queryBtn.addEventListener('click', executeQuery);
+        queryInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') executeQuery();
+        });
+
+        // 加载exp文件夹中所有txt文件的文件名
+        function loadAllFilenames() {
+            if (isLoadingFilenames) return;
+            
+            isLoadingFilenames = true;
+            
+            // 注意：在实际部署环境中，您需要一个后端API来获取文件列表
+            // 这里使用模拟数据作为示例
+            // 真实环境中应该替换为后端接口调用，例如：
+            // fetch('api/get-exp-filenames')
+            //     .then(response => response.json())
+            //     .then(filenames => {
+            //         allFilenames = filenames;
+            //         isLoadingFilenames = false;
+            //     });
+            
+            // 模拟exp文件夹中的txt文件列表
+            // 实际应用中应从服务器获取真实文件列表
+            setTimeout(() => {
+                allFilenames = ['hami', 'sea', 'seajian', 'seajians', 'sen', 'sener', 'shua', 'siu', 'siuber', 'siuju', 'siujuwu', 'siusiu', 'tafe', 'tian', 'tianmiao', 'tu', 'up', 'updown', 'who', 'whomiao', 'wu', 'wus', 'yi', 'yideng', 'yijia', 'yijian', 'yimi', 'yue', 'yues', 'z', 'ze', 'zhi', 'zhimiao', 'zhimiaohua', 'zhizhi', '1th', 'ao', 'aowu', 'bao', 'baober', 'baoer', 'baoyue', 'ber', 'chach', 'chacher', 'chicha', 'cila', 'cont', 'damie', 'day', 'ding', 'dingding', 'down', 'eg', 'ei', 'eibi', 'eideng', 'eijia', 'eijian', 'eimi', 'eimis', 'en', 'enmaimai', 'ez', 'ha', 'has', 'hawu', 'hua', 'huahua', 'huajian', 'huajians', 'ie', 'jiu', 'jiumi', 'jius', 'ju', 'li', 'mai', 'maimai', 'maimi', 'miao', 'miaomiao', 'mie', 'miehua', 'pen', 'rap', 'raper'];
+                isLoadingFilenames = false;
+            }, 500);
+        }
+        
+        // 处理查询输入框输入事件
+        function handleQueryInput() {
+            const inputValue = queryInput.value.trim();
+            
+            if (inputValue === '') {
+                hideSuggestions();
+                return;
+            }
+            
+            // 过滤出以当前输入为前缀的文件名
+            const filtered = allFilenames.filter(filename => 
+                filename.startsWith(inputValue)
+            );
+            
+            if (filtered.length > 0) {
+                showSuggestions(filtered);
+            } else {
+                // 即使没有匹配项，只要输入不为空也显示提示框
+                suggestionsContainer.innerHTML = '<div class="suggestion-item">无匹配项</div>';
+                suggestionsContainer.classList.remove('hidden');
+            }
+        }
+        
+        // 处理查询输入框获得焦点事件
+        function handleQueryFocus() {
+            const inputValue = queryInput.value.trim();
+            if (inputValue !== '') {
+                handleQueryInput();
+            }
+        }
+        
+        // 处理查询输入框按键事件（支持上下箭头选择和回车确认）
+        function handleQueryKeydown(e) {
+            const suggestions = Array.from(suggestionsContainer.getElementsByClassName('suggestion-item'));
+            const activeItem = suggestionsContainer.querySelector('.suggestion-item.active');
+            let index = activeItem ? suggestions.indexOf(activeItem) : -1;
+            
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (suggestions.length === 0) return;
+                
+                // 移除当前激活项的样式
+                if (activeItem) activeItem.classList.remove('active');
+                
+                // 设置新的激活项
+                const newIndex = (index + 1) % suggestions.length;
+                suggestions[newIndex].classList.add('active');
+            } 
+            else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (suggestions.length === 0) return;
+                
+                // 移除当前激活项的样式
+                if (activeItem) activeItem.classList.remove('active');
+                
+                // 设置新的激活项
+                const newIndex = (index - 1 + suggestions.length) % suggestions.length;
+                suggestions[newIndex].classList.add('active');
+            }
+            else if (e.key === 'Enter' && activeItem) {
+                e.preventDefault();
+                selectSuggestion(activeItem.textContent);
+            }
+        }
+        
+        // 处理文档点击事件，点击其他地方隐藏提示框
+        function handleDocumentClick(e) {
+            const isClickInside = queryInput.contains(e.target) || suggestionsContainer.contains(e.target);
+            if (!isClickInside && queryInput.value.trim() === '') {
+                hideSuggestions();
+            }
+        }
+        
+        // 显示提示下拉框
+        function showSuggestions(suggestions) {
+            suggestionsContainer.innerHTML = '';
+            
+            suggestions.forEach(suggestion => {
+                const item = document.createElement('div');
+                item.className = 'suggestion-item';
+                item.textContent = suggestion;
+                
+                // 添加点击事件
+                item.addEventListener('click', () => {
+                    selectSuggestion(suggestion);
+                });
+                
+                suggestionsContainer.appendChild(item);
+            });
+            
+            suggestionsContainer.classList.remove('hidden');
+        }
+        
+        // 隐藏提示下拉框
+        function hideSuggestions() {
+            suggestionsContainer.classList.add('hidden');
+        }
+        
+        // 选择提示项
+        function selectSuggestion(value) {
+            queryInput.value = value;
+            hideSuggestions();
+            executeQuery(); // 选择后自动执行查询
+        }
+
+        function executeQuery() {
+            const queryStr = queryInput.value.trim();
+            if (!queryStr) {
+                showQueryResult('请输入有效的查询字符串', 'error');
+                return;
+            }
+
+            queryResultContainer.innerHTML = `
+                <div class="text-center text-primary py-8">
+                    <i class="fa fa-spinner fa-spin mr-2"></i>正在查询...
+                </div>
+            `;
+
+            Promise.all([
+                fetchTxtFile(queryStr),
+                loadQueryImage(queryStr)
+            ]).then(([txtContent, imageElement]) => {
+                renderQueryResult(queryStr, txtContent, imageElement);
+            }).catch((error) => {
+                showQueryResult(`查询失败：${error.message}`, 'error');
+            });
+        }
+
+        function fetchTxtFile(queryStr) {
+            const txtUrl = `exp/${queryStr}.txt`;
+            return fetch(txtUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 404) return '';
+                        throw new Error(`无法获取文件（HTTP状态：${response.status}）`);
+                    }
+                    return response.text();
+                })
+                .catch(error => {
+                    if (!error.message.includes('404')) throw error;
+                    return '';
+                });
+        }
+
+        function loadQueryImage(queryStr) {
+            return new Promise((resolve) => {
+                const imgSrc = `img/${queryStr}.png`;
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = `查询结果：${queryStr}`;
+                img.className = 'query-image-item opacity-0 transition-opacity duration-300';
+
+                img.onload = () => {
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                    resolve(img);
+                };
+
+                img.onerror = () => {
+                    resolve(null);
+                };
+            });
+        }
+
+        function renderQueryResult(queryStr, txtContent, imageElement) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'space-y-4';
+
+            resultDiv.innerHTML = `
+                <div class="border-b border-gray-200 pb-2">
+                    <h3 class="font-semibold text-dark">查询结果：${queryStr}</h3>
+                </div>
+            `;
+
+            if (imageElement) {
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'mt-2';
+                imageContainer.innerHTML = '<p class="text-sm text-secondary mb-1">zhimiaohua huajian 写法：</p>';
+                imageContainer.appendChild(imageElement);
+                resultDiv.appendChild(imageContainer);
+            }
+
+            if (txtContent) {
+                const txtContainer = document.createElement('div');
+                txtContainer.className = 'mt-2';
+                txtContainer.innerHTML = `
+                    <p class="text-sm text-secondary mb-1">${queryStr}.txt 词义解释：</p>
+                    <pre class="bg-white p-3 rounded border border-gray-200 text-sm whitespace-pre-wrap break-words">${txtContent}</pre>
+                `;
+                resultDiv.appendChild(txtContainer);
+            }
+
+            if (!imageElement && !txtContent) {
+                resultDiv.innerHTML += `
+                    <div class="text-center text-secondary py-4">
+                        <p>未找到相关内容（exp/${queryStr}.txt 和 img/${queryStr}.png 均不存在）</p>
+                    </div>
+                `;
+            }
+
+            queryResultContainer.innerHTML = '';
+            queryResultContainer.appendChild(resultDiv);
+        }
+
+        function showQueryResult(message, type = 'info') {
+            const resultDiv = document.createElement('div');
+            const colorClass = type === 'error' ? 'text-red-500' : 'text-secondary';
+            const iconClass = type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle';
+
+            resultDiv.className = `text-center ${colorClass} py-8`;
+            resultDiv.innerHTML = `<i class="fa ${iconClass} mr-2"></i>${message}`;
+
+            queryResultContainer.innerHTML = '';
+            queryResultContainer.appendChild(resultDiv);
+        }
+    </script>
+</body>
+</html>
