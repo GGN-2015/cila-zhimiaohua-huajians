@@ -11,3 +11,12 @@ script_dir=$(dirname "$abs_script_path")
 
 # 执行构建脚本
 python3 $script_dir/src/exp/show_and_replace.py
+
+# 检查 neko 命令是否存在
+if command -v neko &> /dev/null; then
+    echo "neko found，execute neko sync_remote..."
+    neko sync_remote
+else
+    echo "neko not found!，sync remote yourself!"
+    exit 1
+fi
