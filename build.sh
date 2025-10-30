@@ -15,6 +15,7 @@ python3 $script_dir/src/exp/show_and_replace.py
 # 检查 neko 命令是否存在
 if command -v neko &> /dev/null; then
     echo "neko found，execute neko sync_remote..."
+    neko quick_push
     neko sync_remote
 else
     echo "neko not found!，sync remote yourself!"
