@@ -1,5 +1,12 @@
 ber 来自一支箭碰到东西弹回来的声音，表示对过去的回想。读二声。
-1.ber 放在动词后表示“已经”
-2.ber 放在动词前，表示“慢慢“或者“不急着做某事”
-例句：
-1.我已经吃完饭了。miaomiao mai ber maimai.
+
+
+>>> 已经 (放在动词后)
+
+我已经吃过饭了。
+miaomiao mai ber maimai
+
+>>> 慢慢、不急着做某事 (放在动词前)
+
+有时间，慢慢吃吧。
+baober siusiu, ber mai zhi

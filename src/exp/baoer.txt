@@ -1,1 +1,6 @@
 bao的意思是拿。baoer是对 bao 的始动者名词化，baoer 表示“手”
+
+>>> 手
+
+我的手比你的手大。
+miaomiao baoer mie yue baoer ze aowu

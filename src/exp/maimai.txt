@@ -1,4 +1,6 @@
 mai 表示吃，maimai 是 mai 的对象名词化。maimai 做名词表示“饭“或者“食物”
-例句
-1.我的饭好吃。miaomiao maimai maimi.
-2.你也好吃。yue too maimi.
+
+>>> 饭、食物
+
+我的饭好吃。
+miaomiao maimai maimi.

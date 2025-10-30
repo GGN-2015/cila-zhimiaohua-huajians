@@ -1,4 +1,7 @@
 来自英语，表示 天， 星期几，天空，太阳。
 使用 day1th ~ day7th 表示星期一到星期日。
-例句
-1.疯狂星期四：hawu day4th
+
+>>> 星期、天、天空、太阳
+
+今天有疯狂星期四。
+siuber day baober hawu day4th

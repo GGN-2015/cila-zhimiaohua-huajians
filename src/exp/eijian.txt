@@ -1,1 +1,11 @@
 eijian 表示情态动词 “可以”
+
+>>> 可以（情态动词、表示建议）
+
+你现在可以吃饭。
+yue siuber ei- mai maimai
+
+>>> 能够（情态动词、表示有能力做某事）
+
+我会说吱喵话。
+zhizhi ei- hua zhimiaohua

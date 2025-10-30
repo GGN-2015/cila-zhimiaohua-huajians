@@ -1,1 +1,3 @@
 huajian 是“词语“的意思，huajians是huajian的集合名词化，表示“词典”。
+
+>>> 词典、字典

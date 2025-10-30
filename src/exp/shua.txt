@@ -1,2 +1,6 @@
 灵感来自于中文 “刷子”，意思是清洗、整理、收拾
-shua miaomiao，刷自己表示洗澡
+
+>>> 清洗、整理、洗澡
+
+我想洗澡。
+miaomiao ding shua miaomiao

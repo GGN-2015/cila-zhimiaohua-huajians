@@ -1,9 +1,18 @@
 源自一只小猫的叫声
-1.miao 表示疑问
-2.miao表“为什么”、“如何”、“怎么”
-例句：
-1.为什么呢？
-miao （注：不要使用 miao miao，直接说 miao 就行）
-1.你怎么想？yue miao ding
-2.你在想什么？yue siuber ding miao
-3.“你好”用吱喵语怎么说？li zhimiaohua "你好" miao hua
+
+>>> 表示疑问句（放在句尾）
+
+>>> 为什么
+
+为什么呢？
+miao
+
+>>> 怎么、如何
+
+“你好”用吱喵语怎么说？
+li zhimiaohua "你好" miao hua
+
+>>> 什么
+
+你在想什么？
+yue siuber ding miao
