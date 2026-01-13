@@ -1,4 +1,6 @@
 wus 非常伤心
-例句
-1.因为你说不喜欢我，所以我好难过
+
+>>> 十分伤心
+
+因为你说不喜欢我，所以我好难过
 miaomiao wus, ez yue hua yijiu miaomiao

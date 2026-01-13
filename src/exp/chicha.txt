@@ -1,1 +1,16 @@
 教的反面，表示学，学问，数学
+
+>>> 科研、学问
+
+你正在做科研吗？
+yue siuber do chicha miao
+
+>>> 学、学习
+
+我喜欢学习计算机。
+miaomiao jiu chicha cilaraper
+
+>>> 数学
+
+必须学习数学。
+ei+ chicha chicha

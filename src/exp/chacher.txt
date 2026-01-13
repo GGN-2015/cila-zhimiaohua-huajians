@@ -1,1 +1,6 @@
 chacher 读作“茶匙”，意思是老师
+
+>>> 老师
+
+我是你的老师。
+miaomiao ei yue chacher

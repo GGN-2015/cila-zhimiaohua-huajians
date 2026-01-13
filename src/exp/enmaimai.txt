@@ -1,1 +1,6 @@
 maimai 表示饭，en表示小，enmaimai 表示小零食。
+
+>>> 零食、小零食
+
+吃饭后可以吃小零食。
+mai maimai ber ei- mai enmaimai

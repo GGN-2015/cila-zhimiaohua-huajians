@@ -1,1 +1,6 @@
 jius 表“非常喜欢“, 也为“爱“
+
+>>> 爱、非常喜欢
+
+我爱学习。
+miaomiao jius chicha

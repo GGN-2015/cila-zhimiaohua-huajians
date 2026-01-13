@@ -1,3 +1,6 @@
 以下几个东西等价，读作“他非”
-例句
-可爱即是正确！tafe, jiumi mie eimi zhi
+
+>>> 即是，即
+
+可爱即是正确！
+tafe, jiumi mie eimi zhi
