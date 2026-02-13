@@ -54,13 +54,15 @@ def get_explain(word:str) -> str:
 def get_date_str() -> str:
     from datetime import datetime
     current_time = datetime.now()
-    date_str = current_time.strftime("%Y-%m-%d")
+    date_str = current_time.strftime("%Y-%m-%d %H:%M:%S")
     return date_str
 
 # 生成全文的 markdown
 def generate_markdown_content() -> str:
     content = f"# zhimiaohua 输入法后台词典 \n\n导出日期： {get_date_str()}\n\n"
     
+    # content += '<div style="column-count: 2; column-gap: 20px; column-rule: 1px solid #eee;">\n\n'
+
     # 生成目录
     content += "## 目录\n\n"
     content += "注：加粗词条表示该词汇已有手写文字\n\n"
@@ -79,6 +81,7 @@ def generate_markdown_content() -> str:
         content += get_explain(word).replace(WORD_INDEX_PLACEHOLDER, f"{index}")
         content += f"<!-- END: {word} -->\n\n"
 
+    # content += '</div>\n\n'
     return content
 
 def create_md_file():
