@@ -1,0 +1,6 @@
+介于 cai 和 you 之间的食物，即 “鸡蛋”
+
+>>> 鸡蛋
+
+我想吃鸡蛋。
+miaomiao ding mai caiyou
