@@ -30,14 +30,21 @@ def get_explain(word:str) -> str:
         with open(filepath, "r", encoding="utf-8") as fp:
             raw_content = fp.read().rstrip() + "\n\n"
 
+        # 添加释义编号
+        in_term_index = 0
+        while raw_content.find(">>>") != -1:
+            pos = raw_content.find(">>>")
+            in_term_index += 1
+            raw_content = raw_content[:pos] + f"### ({WORD_INDEX_PLACEHOLDER}.{in_term_index})" + raw_content[pos+3:]
+
         imgpath = os.path.join(IMG_FOLDER, word + ".png")
         if os.path.isfile(imgpath):
             img_content = "### 写法\n\n" + f"<img src=\"{os.path.relpath(imgpath, DIRNOW)}\" style=\"width: 150px\">\n\n"
         else:
             img_content = ""
         
-        content = (f"## {WORD_INDEX_PLACEHOLDER} {word}\n\n" + img_content +
-                   raw_content.replace("\n>>>", "\n###"))
+        content = (f"## ({WORD_INDEX_PLACEHOLDER}) {word}\n\n" + img_content +
+                   raw_content)
     else:
         content = "未找到该词汇的含义"
 
@@ -69,7 +76,7 @@ def generate_markdown_content() -> str:
     for idx, word in enumerate(get_all_words()):
         index = idx + 1
         content += f"<!-- BEGIN: {word} -->\n\n"
-        content += get_explain(word).replace(WORD_INDEX_PLACEHOLDER, f"({index})")
+        content += get_explain(word).replace(WORD_INDEX_PLACEHOLDER, f"{index}")
         content += f"<!-- END: {word} -->\n\n"
 
     return content
