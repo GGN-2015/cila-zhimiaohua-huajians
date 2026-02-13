@@ -1,1 +1,3 @@
 *.pyc
+./src/*.pdf
+./src/*.md
