@@ -218,6 +218,8 @@
 
 - (106) **zhizhi**
 
+<!-- BEGIN: 1th -->
+
 ## (1) 1th
 
 灵感来自对于英语序数词的嘲讽，表示“第一”，“最 ...”。读作“一踢”。
@@ -227,6 +229,10 @@
 喵喵最喜欢吱吱。
 miaomiao 1th jiu zhizhi
 
+<!-- END: 1th -->
+
+<!-- BEGIN: am -->
+
 ## (2) am
 
 灵感来自于用于表示上午下午的表达 AM，表示 “时刻”，“几点钟”。
@@ -235,6 +241,10 @@ miaomiao 1th jiu zhizhi
 
 上午九点。
 9am
+
+<!-- END: am -->
+
+<!-- BEGIN: ao -->
 
 ## (3) ao
 
@@ -248,6 +258,10 @@ miaomiao 1th jiu zhizhi
 
 我脑袋疼。
 miaomiao raper ao
+
+<!-- END: ao -->
+
+<!-- BEGIN: aowu -->
 
 ## (4) aowu
 
@@ -264,6 +278,10 @@ tianmiao you aowu
 
 ### 更（表示形容词比较级）
 
+<!-- END: aowu -->
+
+<!-- BEGIN: bao -->
+
 ## (5) bao
 
 ### 写法
@@ -276,6 +294,10 @@ tianmiao you aowu
 
 可以拿你的钱吗？
 ei- bao yue yiyi miao
+
+<!-- END: bao -->
+
+<!-- BEGIN: baober -->
 
 ## (6) baober
 
@@ -290,6 +312,10 @@ ei- bao yue yiyi miao
 我有水果。
 miaomiao baober guo
 
+<!-- END: baober -->
+
+<!-- BEGIN: baoer -->
+
 ## (7) baoer
 
 ### 写法
@@ -303,6 +329,10 @@ bao的意思是拿。baoer是对 bao 的始动者名词化，baoer 表示“手�
 我的手比你的手大。
 miaomiao baoer mie yue baoer ze aowu
 
+<!-- END: baoer -->
+
+<!-- BEGIN: baoyue -->
+
 ## (8) baoyue
 
 ### 写法
@@ -315,6 +345,10 @@ miaomiao baoer mie yue baoer ze aowu
 
 不哭，抱抱你。
 yi+ wus, baoyue yue
+
+<!-- END: baoyue -->
+
+<!-- BEGIN: ber -->
 
 ## (9) ber
 
@@ -334,6 +368,10 @@ miaomiao mai ber maimai
 有时间，慢慢吃吧。
 baober siusiu, ber mai zhi
 
+<!-- END: ber -->
+
+<!-- BEGIN: chach -->
+
 ## (10) chach
 
 ### 写法
@@ -347,6 +385,10 @@ baober siusiu, ber mai zhi
 我教你数学吧。
 miaomiao chach yue chicha zhi
 
+<!-- END: chach -->
+
+<!-- BEGIN: chacher -->
+
 ## (11) chacher
 
 ### 写法
@@ -359,6 +401,10 @@ chacher 读作“茶匙”，意思是老师
 
 我是你的老师。
 miaomiao ei yue chacher
+
+<!-- END: chacher -->
+
+<!-- BEGIN: chicha -->
 
 ## (12) chicha
 
@@ -379,6 +425,10 @@ miaomiao jiu chicha cilaraper
 必须学习数学。
 ei+ chicha chicha
 
+<!-- END: chicha -->
+
+<!-- BEGIN: cila -->
+
 ## (13) cila
 
 ### 写法
@@ -392,6 +442,10 @@ ei+ chicha chicha
 停电了吗？
 cila yibaober ber miao
 
+<!-- END: cila -->
+
+<!-- BEGIN: cilaraper -->
+
 ## (14) cilaraper
 
 原来的意思是 “电，脑子”，连用的时候表示短语 “电脑”。
@@ -400,6 +454,10 @@ cila yibaober ber miao
 
 电脑是好东西。
 cila raper ei eimi thing
+
+<!-- END: cilaraper -->
+
+<!-- BEGIN: cilazhuathing -->
 
 ## (15) cilazhuathing
 
@@ -415,6 +473,10 @@ cilazhuathing miaomiao zhi
 我会使用手机。
 miaomiao do mie cilazhuathing
 
+<!-- END: cilazhuathing -->
+
+<!-- BEGIN: cont -->
+
 ## (16) cont
 
 ### 写法
@@ -427,6 +489,10 @@ miaomiao do mie cilazhuathing
 
 继续睡觉吧！
 cont z zhi
+
+<!-- END: cont -->
+
+<!-- BEGIN: damie -->
 
 ## (17) damie
 
@@ -441,6 +507,10 @@ cont z zhi
 虽然水果好吃，但是我更喜欢你。
 guo maimi, damie aowu jiu yue
 
+<!-- END: damie -->
+
+<!-- BEGIN: day -->
+
 ## (18) day
 
 ### 写法
@@ -454,6 +524,10 @@ guo maimi, damie aowu jiu yue
 
 今天有疯狂星期四。
 siuber day baober hawu day4th
+
+<!-- END: day -->
+
+<!-- BEGIN: ding -->
 
 ## (19) ding
 
@@ -473,6 +547,10 @@ miaomiao ding z
 我觉得不应该睡觉。
 miaomiao ding yi= z
 
+<!-- END: ding -->
+
+<!-- BEGIN: dingding -->
+
 ## (20) dingding
 
 ding 的 名词化，dingding 名词，想法
@@ -481,6 +559,10 @@ ding 的 名词化，dingding 名词，想法
 
 我有一个想法。
 miaomiao baober 1 dingding
+
+<!-- END: dingding -->
+
+<!-- BEGIN: dingz -->
 
 ## (21) dingz
 
@@ -491,6 +573,10 @@ miaomiao baober 1 dingding
 我困了
 miaomiao dingz ber
 
+<!-- END: dingz -->
+
+<!-- BEGIN: do siubermi -->
+
 ## (22) do siubermi
 
 字面意思是 “做新的、做现在的”，意思为 “更新”。
@@ -499,6 +585,10 @@ miaomiao dingz ber
 
 请更新你的词典。
 do siubermi yue huajians
+
+<!-- END: do siubermi -->
+
+<!-- BEGIN: down -->
 
 ## (23) down
 
@@ -513,6 +603,10 @@ do siubermi yue huajians
 我在下面。
 miaomiao li down
 
+<!-- END: down -->
+
+<!-- BEGIN: eg -->
+
 ## (24) eg
 
 表示例子，灵感来自英语。读作两个英文字母 EG
@@ -521,6 +615,10 @@ miaomiao li down
 
 数学需要例子。
 chicha ei= baober eg
+
+<!-- END: eg -->
+
+<!-- BEGIN: ei -->
 
 ## (25) ei
 
@@ -545,6 +643,10 @@ ei
 吱吱最可爱！
 zhizhi ei 1th jiumi zhi
 
+<!-- END: ei -->
+
+<!-- BEGIN: eibi -->
+
 ## (26) eibi
 
 ### 写法
@@ -557,6 +659,10 @@ eibi表示副词“大概”，灵感来自于 maybe
 
 大概已经没有了。
 eibi yi baober ber
+
+<!-- END: eibi -->
+
+<!-- BEGIN: eideng -->
 
 ## (27) eideng
 
@@ -571,6 +677,10 @@ eideng 表示介于 “必须”和 “可以”之间的“尽量/应该”
 你应该学习。
 yue ei= chicha
 
+<!-- END: eideng -->
+
+<!-- BEGIN: eijia -->
+
 ## (28) eijia
 
 ### 写法
@@ -583,6 +693,10 @@ eijia（也写作ei+）表示情态动词 “必须”
 
 你现在必须睡觉。
 yue siuber ei+ z zhi
+
+<!-- END: eijia -->
+
+<!-- BEGIN: eijian -->
 
 ## (29) eijian
 
@@ -602,6 +716,10 @@ yue siuber ei- mai maimai
 我会说吱喵话。
 zhizhi ei- hua zhimiaohua
 
+<!-- END: eijian -->
+
+<!-- BEGIN: eimi -->
+
 ## (30) eimi
 
 ### 写法
@@ -615,6 +733,10 @@ zhizhi ei- hua zhimiaohua
 吱吱天下第一好！
 zhizhi 1th eimi
 
+<!-- END: eimi -->
+
+<!-- BEGIN: eimis -->
+
 ## (31) eimis
 
 ### 写法
@@ -627,6 +749,10 @@ zhizhi 1th eimi
 
 这很好。
 tu eimis
+
+<!-- END: eimis -->
+
+<!-- BEGIN: en -->
 
 ## (32) en
 
@@ -643,6 +769,10 @@ tu eimis
 蔬菜没有肉好。
 cai mie you en eimi
 
+<!-- END: en -->
+
+<!-- BEGIN: en yiyi -->
+
 ## (33) en yiyi
 
 字面的意思是“少钱”，用来表达 “穷”。
@@ -651,6 +781,10 @@ cai mie you en eimi
 
 我很穷所以没有饭。
 miaomiao en yiyi, ze yi baober maimai
+
+<!-- END: en yiyi -->
+
+<!-- BEGIN: enmaimai -->
 
 ## (34) enmaimai
 
@@ -661,9 +795,17 @@ maimai 表示饭，en表示小，enmaimai 表示小零食。
 吃饭后可以吃小零食。
 mai maimai ber ei- mai enmaimai
 
+<!-- END: enmaimai -->
+
+<!-- BEGIN: enmymy -->
+
 ## (35) enmymy
 
 同 enmaimai, 由于读音相同用作简化版本。
+
+<!-- END: enmymy -->
+
+<!-- BEGIN: ez -->
 
 ## (36) ez
 
@@ -678,6 +820,10 @@ mai maimai ber ei- mai enmaimai
 因为吱吱可爱所以喜欢吱吱。
 jiu zhizhi ez zhizhi jiumi
 
+<!-- END: ez -->
+
+<!-- BEGIN: ha -->
+
 ## (37) ha
 
 ### 写法
@@ -690,6 +836,10 @@ jiu zhizhi ez zhizhi jiumi
 
 我很开心。
 miaomiao ha
+
+<!-- END: ha -->
+
+<!-- BEGIN: hami -->
 
 ## (38) hami
 
@@ -705,6 +855,10 @@ ha 是开心/快乐的意思。hami 是对ha的形容词化，表示有趣的，
 和你交流很有趣。
 mie yue miehua hami
 
+<!-- END: hami -->
+
+<!-- BEGIN: has -->
+
 ## (39) has
 
 ### 写法
@@ -715,12 +869,20 @@ has 非常开心（这里的si是脑袋上画小闪电）
 
 ### 十分开心、非常开心、很开心
 
+<!-- END: has -->
+
+<!-- BEGIN: hawu -->
+
 ## (40) hawu
 
 hawu
 ha 表示快乐，wu 表示悲伤，hawu 表示疯狂或者极端的情感
 
 ### 疯狂、癫狂
+
+<!-- END: hawu -->
+
+<!-- BEGIN: hua -->
 
 ## (41) hua
 
@@ -732,6 +894,10 @@ ha 表示快乐，wu 表示悲伤，hawu 表示疯狂或者极端的情感
 
 ### 说、说话
 
+<!-- END: hua -->
+
+<!-- BEGIN: huahua -->
+
 ## (42) huahua
 
 ### 写法
@@ -742,17 +908,29 @@ huahua 是 hua 的对象名词化，表示语言
 
 ### 语言
 
+<!-- END: huahua -->
+
+<!-- BEGIN: huajian -->
+
 ## (43) huajian
 
 huahua 是语言的意思，huajian是 huahua 的小程度版本，表示“词语“
 
 ### 词语、单词
 
+<!-- END: huajian -->
+
+<!-- BEGIN: huajians -->
+
 ## (44) huajians
 
 huajian 是“词语“的意思，huajians是huajian的集合名词化，表示“词典”。
 
 ### 词典、字典
+
+<!-- END: huajians -->
+
+<!-- BEGIN: ie -->
 
 ## (45) ie
 
@@ -764,6 +942,10 @@ huajian 是“词语“的意思，huajians是huajian的集合名词化，表示
 
 ### 也就是、即
 
+<!-- END: ie -->
+
+<!-- BEGIN: jiu -->
+
 ## (46) jiu
 
 ### 写法
@@ -773,6 +955,10 @@ huajian 是“词语“的意思，huajians是huajian的集合名词化，表示
 亲亲的声音,表喜欢（这个 jiu 好灵性，我喜欢）
 
 ### 喜欢
+
+<!-- END: jiu -->
+
+<!-- BEGIN: jiumi -->
 
 ## (47) jiumi
 
@@ -787,6 +973,10 @@ jiumi 形容词化, 可爱的，含义同泊来词 kawaii
 你真可爱！
 yue jiumi zhi
 
+<!-- END: jiumi -->
+
+<!-- BEGIN: jius -->
+
 ## (48) jius
 
 ### 写法
@@ -800,17 +990,29 @@ jius 表“非常喜欢“, 也为“爱“
 我爱学习。
 miaomiao jius chicha
 
+<!-- END: jius -->
+
+<!-- BEGIN: ju -->
+
 ## (49) ju
 
 表示 “去...”，“走到...”
 
 ### 到 ... 去
 
+<!-- END: ju -->
+
+<!-- BEGIN: le -->
+
 ## (50) le
 
 由于助人为 “乐”，所以 le 表示 “帮助” 的意思。
 
 ### 帮助
+
+<!-- END: le -->
+
+<!-- BEGIN: li -->
 
 ## (51) li
 
@@ -822,11 +1024,19 @@ miaomiao jius chicha
 
 ### 在 ... 里（描述所在的地点）
 
+<!-- END: li -->
+
+<!-- BEGIN: li raper yi baober -->
+
 ## (52) li raper yi baober
 
 原来的意思是 “脑袋里没有”，连用的时候表示短语 “不知道”。
 
 ### 不知道
+
+<!-- END: li raper yi baober -->
+
+<!-- BEGIN: mai -->
 
 ## (53) mai
 
@@ -838,11 +1048,19 @@ miaomiao jius chicha
 
 ### 吃、吃饭
 
+<!-- END: mai -->
+
+<!-- BEGIN: maier -->
+
 ## (54) maier
 
 用于吃饭的东西，表示嘴巴。
 
 ### 嘴、嘴巴
+
+<!-- END: maier -->
+
+<!-- BEGIN: maimai -->
 
 ## (55) maimai
 
@@ -857,6 +1075,10 @@ mai 表示吃，maimai 是 mai 的对象名词化。maimai 做名词表示“饭
 我的饭好吃。
 miaomiao maimai maimi.
 
+<!-- END: maimai -->
+
+<!-- BEGIN: maimi -->
+
 ## (56) maimi
 
 ### 写法
@@ -866,6 +1088,10 @@ miaomiao maimai maimi.
 maimi 是 mai 的形容词化，表示好吃
 
 ### 好吃、美味
+
+<!-- END: maimi -->
+
+<!-- BEGIN: miao -->
 
 ## (57) miao
 
@@ -892,6 +1118,10 @@ li zhimiaohua "你好" miao hua
 你在想什么？
 yue siuber ding miao
 
+<!-- END: miao -->
+
+<!-- BEGIN: miaomiao -->
+
 ## (58) miaomiao
 
 ### 写法
@@ -901,6 +1131,10 @@ yue siuber ding miao
 >>> 我（第一人称代词）
 
 ### 在鼠鼠和猫猫之间，代指猫猫
+
+<!-- END: miaomiao -->
+
+<!-- BEGIN: mie -->
 
 ## (59) mie
 
@@ -916,23 +1150,43 @@ yue siuber ding miao
 
 ### 与 ... 相比（用于指明比较的对象）
 
+<!-- END: mie -->
+
+<!-- BEGIN: miehua -->
+
 ## (60) miehua
 
 hua 表示语言，mie 表示“与”，miehua 表示与人交流。即 “交流/沟通/对话”。
 
 ### 沟通、交流
 
+<!-- END: miehua -->
+
+<!-- BEGIN: my -->
+
 ## (61) my
 
 同 mai, 由于读音相同用作简化版本。
+
+<!-- END: my -->
+
+<!-- BEGIN: mymi -->
 
 ## (62) mymi
 
 同 maimi, 由于读音相同用作简化版本。
 
+<!-- END: mymi -->
+
+<!-- BEGIN: mymy -->
+
 ## (63) mymy
 
 同 maimai, 由于读音相同用作简化版本。
+
+<!-- END: mymy -->
+
+<!-- BEGIN: pen -->
 
 ## (64) pen
 
@@ -944,6 +1198,10 @@ hua 表示语言，mie 表示“与”，miehua 表示与人交流。即 “交�
 
 ### 写、写字、写下
 
+<!-- END: pen -->
+
+<!-- BEGIN: rap -->
+
 ## (65) rap
 
 ### 写法
@@ -953,6 +1211,10 @@ hua 表示语言，mie 表示“与”，miehua 表示与人交流。即 “交�
 灵感来自英语，表示 “读/阅读/浏览”
 
 ### 读、阅读、浏览
+
+<!-- END: rap -->
+
+<!-- BEGIN: raper -->
 
 ## (66) raper
 
@@ -964,11 +1226,19 @@ raper 表示“脑子”，我们假定读用脑子
 
 ### 脑子、大脑
 
+<!-- END: raper -->
+
+<!-- BEGIN: rehua -->
+
 ## (67) rehua
 
 读作 “锐化”，表示翻译。
 
 ### 翻译
+
+<!-- END: rehua -->
+
+<!-- BEGIN: sea -->
 
 ## (68) sea
 
@@ -980,6 +1250,10 @@ raper 表示“脑子”，我们假定读用脑子
 
 ### 海洋、大海
 
+<!-- END: sea -->
+
+<!-- BEGIN: seajian -->
+
 ## (69) seajian
 
 ### 写法
@@ -989,6 +1263,10 @@ raper 表示“脑子”，我们假定读用脑子
 灵感来自英语的海洋 “sea”，seajian 表示“水”
 
 ### 水
+
+<!-- END: seajian -->
+
+<!-- BEGIN: seajians -->
 
 ## (70) seajians
 
@@ -1000,6 +1278,10 @@ seajian的集合名词化，表示湖泊
 
 ### 河流、湖泊
 
+<!-- END: seajians -->
+
+<!-- BEGIN: sen -->
+
 ## (71) sen
 
 ### 写法
@@ -1009,6 +1291,10 @@ seajian的集合名词化，表示湖泊
 灵感来自于英语的listen,表示听/听见
 
 ### 听、听到
+
+<!-- END: sen -->
+
+<!-- BEGIN: sener -->
 
 ## (72) sener
 
@@ -1023,6 +1309,10 @@ sener 表示“耳朵”
 因为耳朵疼，所以我听不见。
 sener ao, ze miaomiao yijian sen
 
+<!-- END: sener -->
+
+<!-- BEGIN: shua -->
+
 ## (73) shua
 
 灵感来自于中文 “刷子”，意思是清洗、整理、收拾
@@ -1031,6 +1321,10 @@ sener ao, ze miaomiao yijian sen
 
 我想洗澡。
 miaomiao ding shua miaomiao
+
+<!-- END: shua -->
+
+<!-- BEGIN: siu -->
 
 ## (74) siu
 
@@ -1047,6 +1341,10 @@ siu 来自一支箭射出去的声音，暗示光阴似箭。SIU单独使用表�
 快吃好吃的饭。
 siu mai maimi maimai
 
+<!-- END: siu -->
+
+<!-- BEGIN: siuber -->
+
 ## (75) siuber
 
 ### 写法
@@ -1057,11 +1355,19 @@ siu mai maimi maimai
 
 ### 现在、正在
 
+<!-- END: siuber -->
+
+<!-- BEGIN: siubermi -->
+
 ## (76) siubermi
 
 形容词：现在的、新的。
 
 ### 新、新的
+
+<!-- END: siubermi -->
+
+<!-- BEGIN: siuju -->
 
 ## (77) siuju
 
@@ -1069,11 +1375,19 @@ siu mai maimi maimai
 
 ### 车、车子
 
+<!-- END: siuju -->
+
+<!-- BEGIN: siujuwu -->
+
 ## (78) siujuwu
 
 车屋，泛指车站，公交车站，火车站等等
 
 ### 车站
+
+<!-- END: siujuwu -->
+
+<!-- BEGIN: siusiu -->
 
 ## (79) siusiu
 
@@ -1084,6 +1398,10 @@ siu mai maimi maimai
 对siu 的名词化，表示时间
 
 ### 时间
+
+<!-- END: siusiu -->
+
+<!-- BEGIN: tafe -->
 
 ## (80) tafe
 
@@ -1098,6 +1416,10 @@ siu mai maimi maimai
 可爱即是正确！
 tafe, jiumi mie eimi zhi
 
+<!-- END: tafe -->
+
+<!-- BEGIN: tian -->
+
 ## (81) tian
 
 ### 写法
@@ -1108,6 +1430,10 @@ tafe, jiumi mie eimi zhi
 
 ### 那边、那里
 
+<!-- END: tian -->
+
+<!-- BEGIN: tianmiao -->
+
 ## (82) tianmiao
 
 表示“哪里”、“哪个“
@@ -1116,6 +1442,10 @@ tafe, jiumi mie eimi zhi
 
 都可以，你觉得哪个更好？
 too ei-, yue ding tianmiao aowu eimi
+
+<!-- END: tianmiao -->
+
+<!-- BEGIN: tu -->
 
 ## (83) tu
 
@@ -1130,6 +1460,10 @@ too ei-, yue ding tianmiao aowu eimi
 这太可爱了！
 tu jiumis zhi
 
+<!-- END: tu -->
+
+<!-- BEGIN: up -->
+
 ## (84) up
 
 ### 写法
@@ -1139,6 +1473,10 @@ tu jiumis zhi
 灵感来自英语，表示“上/上方/上面”
 
 ### 上、上方、上面
+
+<!-- END: up -->
+
+<!-- BEGIN: updown -->
 
 ## (85) updown
 
@@ -1150,6 +1488,10 @@ tu jiumis zhi
 
 ### 楼梯、梯子、台阶、阶梯
 
+<!-- END: updown -->
+
+<!-- BEGIN: who -->
+
 ## (86) who
 
 who
@@ -1159,6 +1501,10 @@ who
 
 他也可以说吱喵语言。
 who too ei- hua zhimiaohua
+
+<!-- END: who -->
+
+<!-- BEGIN: whomiao -->
 
 ## (87) whomiao
 
@@ -1170,6 +1516,10 @@ whomiao
 谁是最可爱的？
 whomiao ei 1th jiumi
 
+<!-- END: whomiao -->
+
+<!-- BEGIN: wu -->
+
 ## (88) wu
 
 ### 写法
@@ -1178,6 +1528,10 @@ whomiao ei 1th jiumi
 
 >>> 哭声
 ### 悲伤
+
+<!-- END: wu -->
+
+<!-- BEGIN: wus -->
 
 ## (89) wus
 
@@ -1191,6 +1545,10 @@ wus 非常伤心
 
 因为你说不喜欢我，所以我好难过
 miaomiao wus, ez yue hua yijiu miaomiao
+
+<!-- END: wus -->
+
+<!-- BEGIN: yi -->
 
 ## (90) yi
 
@@ -1208,6 +1566,10 @@ yi 可以作为前缀否定其他的词语
 
 ### 不 ... （用于否定其他词汇）
 
+<!-- END: yi -->
+
+<!-- BEGIN: yideng -->
+
 ## (91) yideng
 
 ### 写法
@@ -1217,6 +1579,10 @@ yi 可以作为前缀否定其他的词语
 yideng 表示不应该
 
 ### 不应该、不应
+
+<!-- END: yideng -->
+
+<!-- BEGIN: yijia -->
 
 ## (92) yijia
 
@@ -1228,6 +1594,10 @@ yijia 表示 不必
 
 ### 不必须、不必
 
+<!-- END: yijia -->
+
+<!-- BEGIN: yijian -->
+
 ## (93) yijian
 
 ### 写法
@@ -1238,11 +1608,19 @@ yijian 表示不可以
 
 ### 禁止、不可以
 
+<!-- END: yijian -->
+
+<!-- BEGIN: yimaimi -->
+
 ## (94) yimaimi
 
 形容词，“不好吃”。
 
 ### 难吃、不好吃
+
+<!-- END: yimaimi -->
+
+<!-- BEGIN: yimi -->
 
 ## (95) yimi
 
@@ -1254,11 +1632,19 @@ yimi 形容词，表示 “不正确的” 或者 “不合理的”
 
 ### 不正确的、不对的、不合理的
 
+<!-- END: yimi -->
+
+<!-- BEGIN: yiyi -->
+
 ## (96) yiyi
 
 字面意思是坏东西，用来表达“钱”
 
 ### 钱
+
+<!-- END: yiyi -->
+
+<!-- BEGIN: yue -->
 
 ## (97) yue
 
@@ -1270,6 +1656,10 @@ yimi 形容词，表示 “不正确的” 或者 “不合理的”
 
 ### 你（第二人称代词）
 
+<!-- END: yue -->
+
+<!-- BEGIN: yues -->
+
 ## (98) yues
 
 ### 写法
@@ -1280,6 +1670,10 @@ yues 表示你们
 
 ### 你们（第二人称代词复数）
 
+<!-- END: yues -->
+
+<!-- BEGIN: z -->
+
 ## (99) z
 
 漫画中通常用 ZZZ 表示呼噜声，用来表示睡觉。读作英语字母“Z”
@@ -1288,6 +1682,10 @@ yues 表示你们
 
 晚安！
 z zhi
+
+<!-- END: z -->
+
+<!-- BEGIN: ze -->
 
 ## (100) ze
 
@@ -1299,17 +1697,29 @@ z zhi
 
 ### 所以（指明结果）
 
+<!-- END: ze -->
+
+<!-- BEGIN: ze eimi -->
+
 ## (101) ze eimi
 
 ze eimi 的本意是 “因此好”，连用时候表示短语 “谢谢”。
 
 ### 谢谢、感谢
 
+<!-- END: ze eimi -->
+
+<!-- BEGIN: ze yimi -->
+
 ## (102) ze yimi
 
 ze yimi 的本意是 “因此不好”，连用时候表示短语 “对不起”。
 
 ### 对不起、抱歉
+
+<!-- END: ze yimi -->
+
+<!-- BEGIN: zhi -->
 
 ## (103) zhi
 
@@ -1321,6 +1731,10 @@ ze yimi 的本意是 “因此不好”，连用时候表示短语 “对不起�
 
 ### 呀、啊（放在句尾表示感叹或者祈使）
 
+<!-- END: zhi -->
+
+<!-- BEGIN: zhimiao -->
+
 ## (104) zhimiao
 
 ### 写法
@@ -1331,6 +1745,10 @@ ze yimi 的本意是 “因此不好”，连用时候表示短语 “对不起�
 
 ### 我们
 
+<!-- END: zhimiao -->
+
+<!-- BEGIN: zhimiaohua -->
+
 ## (105) zhimiaohua
 
 zhimiaohua 表示“吱喵语言”
@@ -1339,6 +1757,10 @@ zhimiaohua 表示“吱喵语言”
 
 让我们说吱喵语言。
 zhimiao hua zhimiaohua zhi
+
+<!-- END: zhimiaohua -->
+
+<!-- BEGIN: zhizhi -->
 
 ## (106) zhizhi
 
@@ -1352,4 +1774,6 @@ zhizhi 可以用于猫猫对鼠鼠的称呼
 ### 我（第一人称代词）
 
 ### 在鼠鼠和猫猫之间，代指鼠鼠
+
+<!-- END: zhizhi -->
 

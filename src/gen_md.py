@@ -68,7 +68,9 @@ def generate_markdown_content() -> str:
     # 生成内容
     for idx, word in enumerate(get_all_words()):
         index = idx + 1
+        content += f"<!-- BEGIN: {word} -->\n\n"
         content += get_explain(word).replace(WORD_INDEX_PLACEHOLDER, f"({index})")
+        content += f"<!-- END: {word} -->\n\n"
 
     return content
 
