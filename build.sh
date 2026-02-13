@@ -10,7 +10,9 @@ abs_script_path=$(readlink -f "$script_path" 2>/dev/null)
 script_dir=$(dirname "$abs_script_path")
 
 # 执行构建脚本
+# 需要构建网站检索列表以及本地 markdown 词典
 python3 $script_dir/src/exp/show_and_replace.py
+python3 $script_dir/src/gen_md.py
 
 # 检查 neko 命令是否存在
 if command -v neko &> /dev/null; then
